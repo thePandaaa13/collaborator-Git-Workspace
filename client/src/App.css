@@ -1,0 +1,377 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #111114;
+  color: #f2f2f3;
+}
+
+button {
+  font-family: inherit;
+}
+
+
+/* =========================
+ NAVBAR
+ ========================= */
+
+.navbar {
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 32px;
+
+  border-bottom: 1px solid #2b2b31;
+  background: #151519;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.logo-mark {
+  font-size: 13px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.username {
+  color: #a5a5af;
+  font-size: 14px;
+}
+
+.logout-button {
+  border: 1px solid #3a3a42;
+  background: #222228;
+  color: #e8e8eb;
+
+  padding: 8px 15px;
+  border-radius: 6px;
+
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background: #2c2c33;
+}
+
+
+/* =========================
+ DASHBOARD
+ ========================= */
+
+.dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding: 48px 32px;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-bottom: 32px;
+}
+
+.dashboard-header h1 {
+  margin: 0 0 8px;
+
+  font-size: 34px;
+  font-weight: 600;
+  letter-spacing: -0.8px;
+}
+
+.dashboard-header p {
+  margin: 0;
+
+  color: #85858f;
+  font-size: 15px;
+}
+
+.repo-count {
+  color: #85858f;
+  font-size: 14px;
+}
+
+
+/* =========================
+ REPOSITORY GRID
+ ========================= */
+
+.repository-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+
+/* =========================
+ REPOSITORY CARD
+ ========================= */
+
+.repository-card {
+  min-height: 190px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 22px;
+
+  border: 1px solid #2c2c33;
+  border-radius: 10px;
+
+  background: #16161b;
+
+  transition:
+      border-color 0.2s ease,
+      transform 0.2s ease;
+}
+
+.repository-card:hover {
+  border-color: #555560;
+  transform: translateY(-2px);
+}
+
+.repository-icon {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #33333b;
+  border-radius: 7px;
+
+  color: #aaaab4;
+  font-size: 11px;
+
+  margin-bottom: 18px;
+}
+
+.repository-info h3 {
+  margin: 0 0 8px;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  word-break: break-word;
+}
+
+.repository-info p {
+  margin: 0;
+
+  color: #85858f;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+/* =========================
+   WORKSPACE
+   ========================= */
+
+.workspace {
+  height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+}
+
+.workspace-header {
+  height: 58px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 0 24px;
+
+  border-bottom: 1px solid #2b2b31;
+}
+
+.workspace-header h1 {
+  margin: 0;
+
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.workspace-header span {
+  color: #777780;
+  font-size: 13px;
+}
+
+
+/* =========================
+   WORKSPACE BODY
+   ========================= */
+
+.workspace-body {
+  flex: 1;
+
+  display: flex;
+
+  min-height: 0;
+}
+
+
+/* =========================
+   FILE EXPLORER
+   ========================= */
+
+.file-explorer {
+  width: 280px;
+  flex-shrink: 0;
+
+  padding: 20px;
+
+  border-right: 1px solid #2b2b31;
+  background: #151519;
+
+  overflow-y: auto;
+}
+
+.file-explorer h2 {
+  margin: 0 0 16px;
+
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+
+  color: #777780;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 7px 8px;
+
+  border-radius: 5px;
+
+  font-size: 13px;
+  color: #c8c8cf;
+
+  cursor: pointer;
+}
+
+.file-item:hover {
+  background: #222228;
+}
+
+
+/* =========================
+   EDITOR AREA
+   ========================= */
+
+.editor-area {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  min-height: 0;
+
+  background: #111114;
+}
+
+
+/* =========================
+   EDITOR HEADER
+   ========================= */
+
+.editor-header {
+  height: 45px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 15px;
+
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.editor-header button {
+  padding: 7px 16px;
+
+  border: 1px solid #3a3a42;
+  border-radius: 6px;
+
+  background: #222228;
+  color: #e8e8eb;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  cursor: pointer;
+}
+
+.editor-header button:hover {
+  background: #2c2c33;
+}
+
+
+/* =========================
+   MONACO CONTAINER
+   ========================= */
+
+.editor-container {
+  flex: 1;
+
+  min-width: 0;
+  min-height: 0;
+}
+
+
+/* =========================
+   PLACEHOLDER
+   ========================= */
+
+.editor-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.editor-placeholder h2 {
+  margin: 0 0 8px;
+
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.editor-placeholder p {
+  margin: 0;
+
+  color: #777780;
+  font-size: 14px;
+}

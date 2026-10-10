@@ -1,0 +1,56 @@
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0f172a;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.login-card {
+    width: 380px;
+    padding: 45px 35px;
+    text-align: center;
+    background: #1e293b;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.login-card h1 {
+    font-size: 42px;
+    margin-bottom: 8px;
+}
+
+.tagline {
+    font-size: 18px;
+    color: #cbd5e1;
+    margin-bottom: 20px;
+}
+
+.description {
+    color: #94a3b8;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.github-button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #111827;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.github-button:hover {
+    background: #e5e7eb;
+}
+
+.github-icon {
+    margin-right: 8px;
+}
